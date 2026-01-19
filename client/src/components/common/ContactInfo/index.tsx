@@ -30,7 +30,7 @@ const contactInfo = [
 export function ContactInfo() {
   return (
     <div>
-      <h2 className="text-2xl font-bold text-[#041F3F] mb-6">
+      <h2 className="text-2xl font-bold text-white mb-6">
         Informações de Contato
       </h2>
       <div className="space-y-6 mb-8">
@@ -40,34 +40,33 @@ export function ContactInfo() {
             className="flex items-start gap-4"
             data-testid={`contact-info-${index}`}
           >
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0">
               <info.icon className="w-5 h-5 text-primary" />
             </div>
             <div>
-              <p className="text-sm text-muted-foreground">{info.title}</p>
+              <p className="text-sm text-white/60">{info.title}</p>
               {info.href ? (
                 <a
                   href={info.href}
-                  className="text-[#041F3F] font-medium hover:text-primary transition-colors"
+                  className="text-white font-medium hover:text-primary transition-colors"
                 >
                   {info.value}
                 </a>
               ) : (
-                <p className="text-[#041F3F] font-medium">{info.value}</p>
+                <p className="text-white font-medium">{info.value}</p>
               )}
             </div>
           </div>
         ))}
       </div>
 
-      <Card className="p-6 bg-[#041F3F] text-white border-none">
+      <Card className="p-6 bg-white/10 backdrop-blur-sm text-white border-white/20">
         <h3 className="font-bold text-lg mb-2">Treinamento In-Company</h3>
         <p className="text-white/80 text-sm mb-4">
           Oferecemos treinamentos personalizados nas instalações da sua empresa. Entre em contato para saber mais sobre condições especiais para grupos.
         </p>
         <Button
-          variant="outline"
-          className="border-white/30 text-white"
+          className="bg-primary text-primary-foreground"
           data-testid="button-incompany"
         >
           Saiba Mais
