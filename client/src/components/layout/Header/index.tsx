@@ -2,12 +2,13 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoAirTreinamentos from "@assets/Logotipo_AirTreinamentos_1768803746054.png";
 
 const navItems = [
   { label: "Início", href: "/" },
   { label: "Treinamentos", href: "/#treinamentos" },
   { label: "Quem Somos", href: "/quem-somos" },
-  { label: "Contato", href: "/contato" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 export function Header() {
@@ -30,7 +31,13 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20 gap-4">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center" data-testid="logo-airtreinamentos">
+            <img
+              src={logoAirTreinamentos}
+              alt="AirTreinamentos"
+              className="h-10 md:h-12 w-auto"
+              data-testid="logo-airtreinamentos"
+            />
+            <div className="flex items-center">
               <span className="text-xl md:text-2xl font-bold text-[#041F3F]">Air</span>
               <span className="text-xl md:text-2xl font-bold text-primary">Treinamentos</span>
             </div>
@@ -56,14 +63,20 @@ export function Header() {
           </nav>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/contato">
+            <a
+              href="/#contato"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("/#contato");
+              }}
+            >
               <Button
                 className="bg-primary text-primary-foreground font-semibold"
                 data-testid="button-solicitar-proposta"
               >
                 Solicitar Proposta
               </Button>
-            </Link>
+            </a>
           </div>
 
           <button
@@ -101,15 +114,20 @@ export function Header() {
                 {item.label}
               </a>
             ))}
-            <Link href="/contato">
+            <a
+              href="/#contato"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("/#contato");
+              }}
+            >
               <Button
                 className="mt-4 bg-primary text-primary-foreground font-semibold w-full"
                 data-testid="button-mobile-solicitar-proposta"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Solicitar Proposta
               </Button>
-            </Link>
+            </a>
           </nav>
         </div>
       )}
