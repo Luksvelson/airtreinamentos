@@ -10,7 +10,7 @@ const quickLinks = [
 
 const socialLinks = [
   { icon: SiLinkedin, href: "#", label: "LinkedIn" },
-  { icon: SiInstagram, href: "#", label: "Instagram" },
+  { icon: SiInstagram, href: "https://www.instagram.com/airtreinamentos/", label: "Instagram" },
   { icon: SiYoutube, href: "#", label: "YouTube" },
 ];
 

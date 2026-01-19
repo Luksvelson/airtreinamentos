@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# --- 1. REGRA PARA O AIR TREINAMENTOS (.com.br) ---
+# Se o acesso vier pelo domínio .com.br...
+RewriteCond %{HTTP_HOST} ^(www\.)?airtreinamentos\.com\.br$ [NC]
+# ...e não estiver na pasta certa...
+RewriteCond %{REQUEST_URI} !^/airtreinamentos/
+# ...envie para a pasta /airtreinamentos
+RewriteRule ^(.*)$ /airtreinamentos/$1 [L]
+
+# --- 2. REGRA PARA A LOJA (Air Center) ---
+# Se o acesso vier pelo domínio da AirCenter...
+RewriteCond %{HTTP_HOST} ^(www\.)?aircentercompressores\.com(\.br)?$ [NC]
+RewriteCond %{REQUEST_URI} !^/aircenter/
+RewriteRule ^(.*)$ /aircenter/$1 [L]

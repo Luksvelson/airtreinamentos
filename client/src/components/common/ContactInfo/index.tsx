@@ -18,7 +18,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Localização",
-    value: "São Paulo, SP - Brasil",
+    value: "Rio de Janeiro, RJ - Brasil",
   },
   {
     icon: Clock,

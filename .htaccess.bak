@@ -1,0 +1,17 @@
+RewriteEngine On
+
+# 1. Configuração para o site de VENDAS (aircentercompressores)
+# Se o domínio for aircentercompressores...
+RewriteCond %{HTTP_HOST} ^(www\.)?aircentercompressores\.com\.br$ [NC]
+# ...e ainda não estiver na pasta 'loja'...
+RewriteCond %{REQUEST_URI} !^/loja/
+# ...envie para a pasta 'loja'
+RewriteRule ^(.*)$ /loja/$1 [L]
+
+# 2. Configuração para o site de TREINAMENTOS (airtreinamentos)
+# Se o domínio for airtreinamentos...
+RewriteCond %{HTTP_HOST} ^(www\.)?airtreinamentos\.com$ [NC]
+# ...e ainda não estiver na pasta 'airtreinamentos'...
+RewriteCond %{REQUEST_URI} !^/airtreinamentos/
+# ...envie para a pasta 'airtreinamentos'
+RewriteRule ^(.*)$ /airtreinamentos/$1 [L]
