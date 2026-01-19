@@ -8,12 +8,12 @@ const courses = [
     id: 1,
     title: "Imersão Estratégica",
     subtitle: "Ar Comprimido",
-    badge: "Mais Procurado",
+    badge: "Novo",
     description: "Um programa intensivo de dois dias projetado para transformar a forma como sua empresa gerencia sistemas de ar comprimido, focando em eficiência, economia e melhores práticas.",
     details: [
       { icon: Clock, label: "Duração", value: "2 dias (16h)" },
       { icon: Users, label: "Formato", value: "Presencial" },
-      { icon: MapPin, label: "Local", value: "São Paulo, SP" },
+      { icon: MapPin, label: "Local", value: "Rio de Janeiro, RJ" },
     ],
     features: [
       "Diagnóstico e dimensionamento de sistemas",
@@ -21,19 +21,18 @@ const courses = [
       "Manutenção preventiva e corretiva",
       "Gestão de qualidade do ar comprimido",
       "Análise de casos reais da indústria",
-      "Certificado de participação",
     ],
   },
   {
     id: 2,
     title: "Eficiência Energética",
     subtitle: "em Sistemas de Ar",
-    badge: "Novo",
+    badge: "Em desenvolvimento",
     description: "Curso focado em otimização energética de sistemas de ar comprimido, identificação de vazamentos, recuperação de calor e estratégias para redução significativa de custos operacionais.",
     details: [
       { icon: Clock, label: "Duração", value: "1 dia (8h)" },
       { icon: Users, label: "Formato", value: "Presencial" },
-      { icon: MapPin, label: "Local", value: "São Paulo, SP" },
+      { icon: MapPin, label: "Local", value: "Rio de Janeiro, RJ" },
     ],
     features: [
       "Auditoria energética de sistemas",
@@ -41,7 +40,6 @@ const courses = [
       "Recuperação de calor do compressor",
       "Dimensionamento correto de tubulações",
       "Análise de demanda e otimização",
-      "Certificado de participação",
     ],
   },
 ];
@@ -51,9 +49,6 @@ export function TrainingOverview() {
     <section id="treinamentos" className="py-16 md:py-24 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
-            Treinamentos Disponíveis
-          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="training-title">
             Nossos Treinamentos
           </h2>
@@ -150,7 +145,7 @@ export function TrainingOverview() {
                   <Card className="overflow-hidden border-none shadow-lg order-1 lg:order-2" data-testid={`card-training-${course.id}`}>
                     <div className="relative h-48 md:h-64 bg-gradient-to-br from-[#0a3566] to-[#041F3F] flex items-center justify-center">
                       <div className="text-center p-6">
-                        <Badge className="bg-green-500 text-white mb-3">
+                        <Badge className="bg-gray-500 text-white mb-3">
                           {course.badge}
                         </Badge>
                         <h3 className="text-2xl md:text-3xl font-bold text-white">
@@ -198,17 +193,16 @@ export function TrainingOverview() {
               <Users className="w-8 h-8 text-primary-foreground" />
             </div>
             <div className="text-center md:text-left flex-1">
-              <p className="font-semibold text-lg">Turmas Reduzidas</p>
+              <p className="font-semibold text-lg">Turmas In-Company</p>
               <p className="text-white/70">
-                Máximo de 15 participantes por turma para garantir atenção individualizada e melhor aproveitamento do conteúdo.
+                Quer uma capacitação personalizada para sua equipe? Nossas turmas In-Company são adaptadas às necessidades específicas da sua empresa, garantindo máxima relevância e impacto.
               </p>
             </div>
             <Button
-              variant="outline"
-              className="border-white/30 text-white"
+              className="border-white/30 bg-white text-[#041F3F]"
               data-testid="button-agendar-turma"
             >
-              Agendar Turma
+              Quero conhecer esse modelo
             </Button>
           </div>
         </Card>

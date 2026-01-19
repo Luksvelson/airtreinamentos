@@ -28,7 +28,7 @@
 - Large hero image: Industrial compressor facility or training session (professional photography, bright lighting)
 - Overlay gradient from `#041F3F` (60% opacity) to transparent
 - Centered content with headline + subheadline + dual CTAs
-- Trust indicators: "Grupo AirCenter" badge, years of experience, client count
+- Trust indicators: "Grupo AirPress" badge, years of experience, client count
 - CTA buttons with blur background treatment (backdrop-blur-md)
 
 ### Navigation
@@ -68,7 +68,7 @@
 
 ### Footer
 - Dark navy (#041F3F) background with white/gray text
-- 4-column layout: About AirCenter, Quick Links, Contact Info, Social Media
+- 4-column layout: About AirPress, Quick Links, Contact Info, Social Media
 - Bottom bar: Copyright, Privacy Policy links
 - Logo in grayscale or white variant
 

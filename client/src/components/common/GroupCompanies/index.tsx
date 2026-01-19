@@ -27,13 +27,13 @@ export function GroupCompanies() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-10">
           <Badge className="bg-[#041F3F]/10 text-[#041F3F] border-[#041F3F]/20 mb-4">
-            Grupo AirCenter
+            Grupo AirPress
           </Badge>
           <h2 className="text-2xl md:text-3xl font-bold text-[#041F3F] mb-3" data-testid="group-companies-title">
-            Uma Empresa do Grupo AirCenter
+            Uma Empresa do Grupo AirPress
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A AirTreinamentos faz parte do Grupo AirCenter, referência nacional em soluções de ar comprimido e gases medicinais.
+            A AirTreinamentos faz parte do Grupo AirPress, referência nacional em soluções de ar comprimido e gases medicinais.
           </p>
         </div>
 

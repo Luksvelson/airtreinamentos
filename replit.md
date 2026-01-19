@@ -2,7 +2,7 @@
 
 ## Overview
 
-AirTreinamentos is a B2B professional training platform for the compressed air industry, part of the Grupo AirCenter. The application serves as a marketing website and lead generation tool for technical training courses targeting industrial managers, engineers, and maintenance technicians in Brazil.
+AirTreinamentos is a B2B professional training platform for the compressed air industry, part of the Grupo AirPress. The application serves as a marketing website and lead generation tool for technical training courses targeting industrial managers, engineers, and maintenance technicians in Brazil.
 
 The platform features a landing page with training information, instructor profiles, and a contact form for lead capture. Content is in Brazilian Portuguese.
 

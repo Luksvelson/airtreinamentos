@@ -97,9 +97,6 @@ export function About() {
       <main className="flex-1 pt-16 md:pt-20">
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#041F3F] to-[#0a3566]">
           <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-            <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">
-              Quem Somos
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6" data-testid="about-title">
               Transformando o Mercado de <span className="text-primary">Ar Comprimido</span>
             </h1>
@@ -113,15 +110,12 @@ export function About() {
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <Badge className="bg-primary/10 text-primary border-primary/20">
-                  Nossa História
-                </Badge>
                 <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F]" data-testid="history-title">
-                  Parte do Grupo AirCenter
+                  Grupo AirPress
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    A <strong className="text-[#041F3F]">AirTreinamentos</strong> nasceu da expertise acumulada pelo Grupo AirCenter ao longo de mais de 20 anos de atuação no mercado brasileiro de ar comprimido e gases medicinais.
+                    A <strong className="text-[#041F3F]">AirTreinamentos</strong> nasceu da expertise acumulada pelo Grupo AirPress ao longo de mais de 20 anos de atuação no mercado brasileiro de ar comprimido e gases medicinais.
                   </p>
                   <p>
                     Identificamos a necessidade do mercado por capacitação técnica especializada e de alto nível. Assim, reunimos os melhores profissionais do setor para desenvolver programas de treinamento que realmente fazem diferença na operação das empresas.
@@ -134,13 +128,13 @@ export function About() {
               
               <div className="space-y-6">
                 <p className="text-sm font-medium text-muted-foreground text-center">
-                  Empresas do Grupo AirCenter
+                  Empresas do Grupo AirPress
                 </p>
                 <div className="grid grid-cols-1 gap-4">
                   {groupCompanies.map((company) => (
                     <div
                       key={company.id}
-                      className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm border border-border"
+                      className="flex items-center justify-center p-6 bg-white rounded-lg"
                       data-testid={`about-logo-${company.id}`}
                     >
                       <img
@@ -159,9 +153,6 @@ export function About() {
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
-              <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
-                Nossos Princípios
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="values-title">
                 Missão e Valores
               </h2>
@@ -191,9 +182,6 @@ export function About() {
         <section className="py-16 md:py-20 bg-background">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
-              <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
-                Time de Especialistas
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="instructors-title">
                 Nossos Instrutores
               </h2>
@@ -244,9 +232,6 @@ export function About() {
         <section className="py-16 md:py-20 bg-muted/30">
           <div className="max-w-7xl mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
-              <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
-                Infraestrutura
-              </Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="structure-title">
                 Nossa Estrutura
               </h2>

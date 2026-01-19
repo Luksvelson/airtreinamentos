@@ -15,10 +15,8 @@ export function Home() {
       <main className="flex-1 pt-16 md:pt-20">
         <Hero />
         <GroupCompanies />
-        <TrainingOverview />
         <Features />
-        <TargetAudience />
-        <Instructors />
+        <TrainingOverview />
         <CTASection />
       </main>
       <Footer />

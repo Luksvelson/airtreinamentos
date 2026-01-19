@@ -4,46 +4,46 @@ import { Lightbulb, Wrench, Award, TrendingUp, Shield, BookOpen } from "lucide-r
 const features = [
   {
     icon: Lightbulb,
-    title: "Expertise Técnica",
-    description: "Instrutores com mais de 20 anos de experiência prática em sistemas industriais de ar comprimido.",
+    title: "Eficiência Energética",
+    description: "Ensinamos a identificar ineficiências e reduzir a conta de energia elétrica do sistema em até 30% através de ajustes operacionais e correção de vazamentos.",
   },
   {
     icon: Wrench,
-    title: "Prática Intensiva",
-    description: "Exercícios hands-on com equipamentos reais e estudos de caso baseados em situações reais da indústria.",
-  },
-  {
-    icon: Award,
-    title: "Certificação",
-    description: "Certificado reconhecido pelo mercado que comprova sua qualificação técnica profissional.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Resultados Mensuráveis",
-    description: "Metodologia focada em ROI, com métricas claras de economia e eficiência energética.",
+    title: "Confiabilidade Operacional",
+    description: "Ar de má qualidade destrói válvulas e paralisia a produção. Capacite sua equipe para garantir a pureza do ar (ISO 8573), protegendo o maquinário pneumático e evitando paradas não planejadas.",
   },
   {
     icon: Shield,
-    title: "Segurança Industrial",
-    description: "Boas práticas de segurança e conformidade com normas regulamentadoras do setor.",
+    title: "Segurança e NR-13",
+    description: "Sistemas pressurizados exigem rigor técnico. Nossos treinamentos cobrem as normas regulamentadoras (NR-13) e as melhores práticas para garantir a integridade física dos colaboradores e evitar multas pesadas.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Manutenção de Alta Performance",
+    description: "Ensinamos técnicos a realizar diagnósticos precisos de falhas em compressores e secadores, aumentando a disponibilidade dos equipamentos e reduzindo custos de reparo.",
   },
   {
     icon: BookOpen,
-    title: "Material Exclusivo",
-    description: "Apostila técnica completa e acesso a conteúdos complementares pós-treinamento.",
+    title: "Compras Técnicas Inteligentes",
+    description: "Negocie valor, não apenas preço. Compradores aprenderão a calcular o TCO (Total Cost of Ownership). Saiba escolher equipamentos que se economizam ao longo do tempo, em vez de focar apenas no menor preço de etiqueta.",
+  },
+  {
+    icon: Award,
+    title: "Sustentabilidade e ESG",
+    description: "Um sistema vazando ou mal dimensionado desperdiça recursos naturais. Otimizar o ar comprimido é uma das formas mais rápidas e eficazes de atingir as metas de sustentabilidade da sua empresa.",
   },
 ];
 
 export function Features() {
   return (
-    <section className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section className="py-16 md:py-24 bg-[#041F3F]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="features-title">
-            Por que escolher a AirTreinamentos?
+          <h2 className="text-3xl md:text-4xl font-bold text-[#F8F9FA] mb-4" data-testid="features-title">
+            Por que investir em conhecimento sobre Ar Comprimido?
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Combinamos conhecimento técnico profundo com metodologia prática para entregar resultados reais ao seu negócio.
+          <p className="text-muted max-w-1xl text-[#F8F9FA] mx-auto">
+            O ar comprimido é a utilidade mais cara da indústria. Uma gestão inadequada pode levar a desperdícios significativos e riscos operacionais. Nossos treinamentos capacitam sua equipe para otimizar o uso do ar comprimido, resultando em economia, eficiência e segurança.
           </p>
         </div>
 

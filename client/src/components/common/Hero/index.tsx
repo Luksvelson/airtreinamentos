@@ -21,17 +21,13 @@ export function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-24 md:py-32">
         <div className="text-center space-y-8">
-          <Badge className="bg-primary/20 text-primary border-primary/30 px-4 py-1.5" data-testid="badge-grupo-aircenter">
-            Grupo AirCenter
-          </Badge>
-
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight" data-testid="hero-title">
               Capacitação Técnica em
               <span className="block text-primary">Ar Comprimido</span>
             </h1>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed" data-testid="hero-subtitle">
-              Treinamentos presenciais de alto impacto para gestores industriais, engenheiros e equipes técnicas que buscam excelência em sistemas de ar comprimido.
+              Treinamentos de alto impacto para gestores industriais, engenheiros e equipes técnicas que buscam excelência em sistemas de ar comprimido.
             </p>
           </div>
 

@@ -28,7 +28,7 @@ export function Footer() {
               Unidade de treinamentos técnicos do Grupo AirCenter, especializada em capacitação profissional em ar comprimido.
             </p>
             <p className="text-white/50 text-xs">
-              Uma empresa do Grupo AirCenter
+              Uma empresa do Grupo AirPress
             </p>
           </div>
 
