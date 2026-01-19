@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, ArrowRight, Clock } from "lucide-react";
-import { Link } from "wouter";
 
 export function CTASection() {
   return (
@@ -18,25 +17,34 @@ export function CTASection() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
             <a
-              href="tel:+5511999999999"
+              href="tel:+5521985521685"
               className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg transition-colors hover-elevate"
               data-testid="cta-phone"
             >
               <Phone className="w-5 h-5 text-primary" />
-              <span className="text-white font-medium">(11) 99999-9999</span>
+              <span className="text-white font-medium">(21) 98552-1685</span>
             </a>
             <a
-              href="mailto:contato@airtreinamentos.com.br"
+              href="mailto:roberto@airtreinamentos.com"
               className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-4 rounded-lg transition-colors hover-elevate"
               data-testid="cta-email"
             >
               <Mail className="w-5 h-5 text-primary" />
-              <span className="text-white font-medium">contato@airtreinamentos.com.br</span>
+              <span className="text-white font-medium">roberto@airtreinamentos.com</span>
             </a>
           </div>
 
           <div>
-            <Link href="/contato">
+            <a
+              href="/#contato"
+              onClick={(e) => {
+                e.preventDefault();
+                const element = document.getElementById("contato");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground font-semibold px-8 py-6 text-base"
@@ -45,7 +53,7 @@ export function CTASection() {
                 Solicitar Proposta
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-            </Link>
+            </a>
           </div>
 
           <div className="flex items-center justify-center gap-2 text-white/60 text-sm">

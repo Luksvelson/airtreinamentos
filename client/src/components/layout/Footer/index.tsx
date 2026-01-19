@@ -5,7 +5,7 @@ const quickLinks = [
   { label: "Início", href: "/" },
   { label: "Treinamentos", href: "/#treinamentos" },
   { label: "Instrutores", href: "/#instrutores" },
-  { label: "Contato", href: "/contato" },
+  { label: "Contato", href: "/#contato" },
 ];
 
 const socialLinks = [
@@ -52,20 +52,20 @@ export function Footer() {
             <h4 className="text-lg font-semibold text-white">Contato</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+5511999999999"
+                href="tel:+5521985521685"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors text-sm"
                 data-testid="footer-phone"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>(11) 99999-9999</span>
+                <span>(21) 98552-1685</span>
               </a>
               <a
-                href="mailto:contato@airtreinamentos.com.br"
+                href="mailto:roberto@airtreinamentos.com"
                 className="flex items-center gap-3 text-white/70 hover:text-primary transition-colors text-sm"
                 data-testid="footer-email"
               >
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>contato@airtreinamentos.com.br</span>
+                <span>roberto@airtreinamentos.com</span>
               </a>
               <div className="flex items-start gap-3 text-white/70 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />

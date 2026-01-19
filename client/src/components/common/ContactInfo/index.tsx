@@ -6,14 +6,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefone",
-    value: "(11) 99999-9999",
-    href: "tel:+5511999999999",
+    value: "(21) 98552-1685",
+    href: "tel:+5521985521685",
   },
   {
     icon: Mail,
     title: "E-mail",
-    value: "contato@airtreinamentos.com.br",
-    href: "mailto:contato@airtreinamentos.com.br",
+    value: "roberto@airtreinamentos.com",
+    href: "mailto:roberto@airtreinamentos.com",
   },
   {
     icon: MapPin,
