@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Users, Award, Calendar } from "lucide-react";
-import heroBackground from "@assets/stock_images/industrial_air_compr_51b09f86.jpg";
+import heroBackground from "@assets/generated_images/industrial_air_compressor_machine.png";
 
 const trustIndicators = [
   { icon: Calendar, value: "+20", label: "Anos de experiência" },
