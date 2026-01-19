@@ -6,6 +6,7 @@ import { Features } from "@/components/common/Features";
 import { TargetAudience } from "@/components/common/TargetAudience";
 import { Instructors } from "@/components/common/Instructors";
 import { CTASection } from "@/components/common/CTASection";
+import { GroupCompanies } from "@/components/common/GroupCompanies";
 
 export function Home() {
   return (
@@ -13,6 +14,7 @@ export function Home() {
       <Header />
       <main className="flex-1 pt-16 md:pt-20">
         <Hero />
+        <GroupCompanies />
         <TrainingOverview />
         <Features />
         <TargetAudience />
