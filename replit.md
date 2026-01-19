@@ -34,19 +34,27 @@ Preferred communication style: Simple, everyday language.
 
 ### Project Structure
 ```
-├── client/           # React frontend application
+├── client/                    # React frontend application
 │   └── src/
-│       ├── components/   # UI and page components
-│       ├── hooks/        # Custom React hooks
-│       ├── lib/          # Utilities and query client
-│       └── services/     # API service layer
-├── server/           # Express backend
-│   ├── routes.ts     # API route definitions
-│   ├── storage.ts    # Data access layer
-│   └── static.ts     # Static file serving
-├── shared/           # Shared types and schemas
-│   └── schema.ts     # Drizzle schema and Zod validators
-└── migrations/       # Database migrations (Drizzle Kit)
+│       ├── components/
+│       │   ├── common/        # Reusable UI components (Hero, Features, etc.)
+│       │   ├── layout/        # Layout components (Header, Footer)
+│       │   ├── pages/         # Page compositions (Home, Contact)
+│       │   └── ui/            # shadcn/ui base components
+│       ├── hooks/             # Custom React hooks (useContact)
+│       ├── services/          # API service layer
+│       ├── context/           # React context providers
+│       ├── styles/            # Style constants and utilities
+│       ├── utils/             # Utility functions (formatters)
+│       ├── routes/            # Route definitions
+│       └── lib/               # Query client configuration
+├── server/                    # Express backend
+│   ├── routes.ts              # API route definitions
+│   ├── storage.ts             # Data access layer
+│   └── static.ts              # Static file serving
+├── shared/                    # Shared types and schemas
+│   └── schema.ts              # Drizzle schema and Zod validators
+└── migrations/                # Database migrations (Drizzle Kit)
 ```
 
 ### Design System
