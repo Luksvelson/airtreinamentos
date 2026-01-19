@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAirTreinamentos from "@assets/Logotipo_AirTreinamentos_1768803746054.png";
+import logoAirTreinamentos from "@assets/Logotipo_AirTreinamentos.png";
 
 const navItems = [
   { label: "Início", href: "/" },
