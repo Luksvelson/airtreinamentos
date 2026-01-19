@@ -3,7 +3,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/common/Hero";
 import { TrainingOverview } from "@/components/common/TrainingOverview";
 import { Features } from "@/components/common/Features";
-import { CTASection } from "@/components/common/CTASection";
 import { GroupCompanies } from "@/components/common/GroupCompanies";
 import { ContactSection } from "@/components/common/ContactSection";
 
@@ -17,7 +16,6 @@ export function Home() {
         <Features />
         <TrainingOverview />
         <ContactSection />
-        <CTASection />
       </main>
       <Footer />
     </div>
