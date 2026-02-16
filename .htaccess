@@ -1,15 +1,29 @@
-RewriteEngine On
+# --- VACINA CONTRA ERRO UID ---
+# Isso impede que o servidor tente carregar scripts do sistema em caso de erro
+ErrorDocument 404 "<h1>Pagina nao encontrada (Erro 404)</h1>"
+ErrorDocument 403 "<h1>Acesso Negado (Erro 403)</h1>"
+ErrorDocument 500 "<h1>Erro Interno do Servidor (Erro 500)</h1>"
 
-# --- 1. REGRA PARA O AIR TREINAMENTOS (.com.br) ---
-# Se o acesso vier pelo domínio .com.br...
+# Configurações Padrão
+# Define o arquivo padrão e impede listagem de pastas
+DirectoryIndex index.html
+Options -Indexes
+
+RewriteEngine On
+RewriteBase /
+
+# --- FORÇAR HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- ROTA 1: AIR TREINAMENTOS ---
 RewriteCond %{HTTP_HOST} ^(www\.)?airtreinamentos\.com\.br$ [NC]
-# ...e não estiver na pasta certa...
 RewriteCond %{REQUEST_URI} !^/airtreinamentos/
-# ...envie para a pasta /airtreinamentos
 RewriteRule ^(.*)$ /airtreinamentos/$1 [L]
 
-# --- 2. REGRA PARA A LOJA (Air Center) ---
-# Se o acesso vier pelo domínio da AirCenter...
+# --- ROTA 2: AIR CENTER (LOJA) ---
+# Só redireciona se o arquivo/pasta destino realmente existir
+# ou se for a raiz do site.
 RewriteCond %{HTTP_HOST} ^(www\.)?aircentercompressores\.com(\.br)?$ [NC]
 RewriteCond %{REQUEST_URI} !^/aircenter/
 RewriteRule ^(.*)$ /aircenter/$1 [L]

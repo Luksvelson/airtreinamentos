@@ -1,17 +1,22 @@
+# 1. Configurações de segurança e arquivo padrão
+Options -Indexes
+DirectoryIndex index.html
+ErrorDocument 404 /index.html
+
 RewriteEngine On
+RewriteBase /
 
-# 1. Configuração para o site de VENDAS (aircentercompressores)
-# Se o domínio for aircentercompressores...
-RewriteCond %{HTTP_HOST} ^(www\.)?aircentercompressores\.com\.br$ [NC]
-# ...e ainda não estiver na pasta 'loja'...
-RewriteCond %{REQUEST_URI} !^/loja/
-# ...envie para a pasta 'loja'
-RewriteRule ^(.*)$ /loja/$1 [L]
+# 2. FORÇAR HTTPS (SEGURANÇA)
+# Se não estiver usando HTTPS, redireciona agora
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# 2. Configuração para o site de TREINAMENTOS (airtreinamentos)
-# Se o domínio for airtreinamentos...
-RewriteCond %{HTTP_HOST} ^(www\.)?airtreinamentos\.com$ [NC]
-# ...e ainda não estiver na pasta 'airtreinamentos'...
+# 3. ROTA PARA O SITE: AIR TREINAMENTOS
+# Se o domínio for airtreinamentos.com.br
+RewriteCond %{HTTP_HOST} ^(www\.)?airtreinamentos\.com\.br$ [NC]
+# E se o pedido NÃO for para um arquivo real (imagem, css, etc)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# Envie tudo para a pasta do site React
 RewriteCond %{REQUEST_URI} !^/airtreinamentos/
-# ...envie para a pasta 'airtreinamentos'
 RewriteRule ^(.*)$ /airtreinamentos/$1 [L]
