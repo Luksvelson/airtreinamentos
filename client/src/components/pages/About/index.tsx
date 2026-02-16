@@ -13,7 +13,7 @@ import logoLojaDoCompressor from "@assets/Logo_Loja_do_Compressor_1768798137395.
 
 import instructorLuciano from "@assets/Instrutor_Luciano_Maffeis_1768799441421.jpeg";
 import instructorOscar from "@assets/Instrutor_Oscar_Redivo_1768799441421.jpeg";
-import instructorRoberto from "@assets/Instrutor_Roberto_Mendes_Invertida_1768799441422.jpeg";
+import instructorRoberto from "@assets/Instrutor_Roberto_Mendes_Invertida.jpeg";
 import instructorVandeir from "@assets/Instrutor_Vandeir_Mendes_Invertida_1768799441422.jpeg";
 
 import galleryTrainingRoom from "@assets/generated_images/training_room_with_equipment.png";
