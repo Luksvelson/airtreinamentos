@@ -284,13 +284,13 @@ export function About() {
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
               Entre em contato conosco e descubra como nossos treinamentos podem elevar o nível técnico da sua empresa.
             </p>
-            <Link href="/contato">
+            <Link href="/treinamentos/presenciais">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground font-semibold px-8"
                 data-testid="button-about-cta"
               >
-                Fale Conosco
+                Conheça Nossos Cursos
                 <ChevronRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>

@@ -1,80 +1,96 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { SiLinkedin } from "react-icons/si";
+
+import instructorLuciano from "@assets/Instrutor_Luciano_Maffeis_1768799441421.jpeg";
+import instructorOscar from "@assets/Instrutor_Oscar_Redivo_1768799441421.jpeg";
+import instructorRoberto from "@assets/Instrutor_Roberto_Mendes_Invertida.jpeg";
+import instructorVandeir from "@assets/Instrutor_Vandeir_Mendes_Invertida_1768799441422.jpeg";
 
 const instructors = [
   {
-    name: "A definir",
-    role: "Especialista em Ar Comprimido",
-    specialty: "Eficiência Energética",
-    initials: "AD",
-    placeholder: true,
+    id: 1,
+    name: "Luciano Maffeis",
+    role: "Diretor Técnico",
+    image: instructorLuciano,
+    bio: "Mais de 25 anos de experiência em sistemas de ar comprimido. Especialista em eficiência energética e dimensionamento de instalações industriais.",
+    linkedin: "#",
   },
   {
-    name: "A definir",
-    role: "Engenheiro de Aplicações",
-    specialty: "Sistemas Industriais",
-    initials: "AD",
-    placeholder: true,
+    id: 2,
+    name: "Oscar Redivo",
+    role: "Instrutor Sênior",
+    image: instructorOscar,
+    bio: "Engenheiro com 20 anos de atuação no setor industrial. Especialista em manutenção preventiva e corretiva de compressores.",
+    linkedin: "#",
   },
   {
-    name: "A definir",
-    role: "Consultor Técnico",
-    specialty: "Manutenção Industrial",
-    initials: "AD",
-    placeholder: true,
+    id: 3,
+    name: "Roberto Mendes",
+    role: "Instrutor Técnico",
+    image: instructorRoberto,
+    bio: "Técnico especializado com vasta experiência em campo. Expert em diagnóstico de falhas e otimização de sistemas.",
+    linkedin: "#",
+  },
+  {
+    id: 4,
+    name: "Vandeir Mendes",
+    role: "Instrutor Técnico",
+    image: instructorVandeir,
+    bio: "Profissional com ampla experiência em treinamentos corporativos. Especialista em qualidade do ar comprimido e tratamento de ar.",
+    linkedin: "#",
   },
 ];
 
 export function Instructors() {
   return (
-    <section id="instrutores" className="py-16 md:py-24 bg-[#F8F9FA]">
+    <section id="professores" className="py-16 md:py-24 bg-muted/30">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <Badge className="bg-[#041F3F]/10 text-[#041F3F] border-[#041F3F]/20 mb-4">
-            Equipe Especializada
+          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+            Time de Especialistas
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="instructors-title">
-            Nossos Instrutores
+            Nossos Professores
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Profissionais com vasta experiência de mercado, prontos para compartilhar conhecimentos práticos e estratégicos.
+            Profissionais com décadas de experiência prática, prontos para compartilhar conhecimento e transformar sua equipe.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {instructors.map((instructor, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {instructors.map((instructor) => (
             <Card
-              key={index}
-              className="p-6 text-center border border-card-border bg-white hover-elevate transition-all duration-200"
-              data-testid={`instructor-card-${index}`}
+              key={instructor.id}
+              className="overflow-hidden border-none shadow-lg"
+              data-testid={`instructor-card-${instructor.id}`}
             >
-              <Avatar className="w-24 h-24 mx-auto mb-4 bg-[#041F3F]">
-                <AvatarFallback className="text-2xl font-bold text-primary bg-[#041F3F]">
-                  {instructor.initials}
-                </AvatarFallback>
-              </Avatar>
-
-              {instructor.placeholder && (
-                <Badge variant="secondary" className="mb-3">
-                  Em breve
-                </Badge>
-              )}
-
-              <h3 className="text-lg font-bold text-[#041F3F] mb-1">{instructor.name}</h3>
-              <p className="text-primary font-medium text-sm mb-2">{instructor.role}</p>
-              <p className="text-muted-foreground text-sm mb-4">{instructor.specialty}</p>
-
-              {!instructor.placeholder && (
+              <div className="aspect-square overflow-hidden bg-[#041F3F]">
+                <img
+                  src={instructor.image}
+                  alt={instructor.name}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="p-5 space-y-3">
+                <div>
+                  <h3 className="font-bold text-[#041F3F]">{instructor.name}</h3>
+                  <p className="text-sm text-primary font-medium">{instructor.role}</p>
+                </div>
+                <p className="text-sm text-muted-foreground line-clamp-3">
+                  {instructor.bio}
+                </p>
                 <a
-                  href="#"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#041F3F]/5 transition-colors hover-elevate"
-                  aria-label="LinkedIn"
+                  href={instructor.linkedin}
+                  className="inline-flex items-center gap-2 text-sm text-[#041F3F] font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`linkedin-${instructor.id}`}
                 >
-                  <SiLinkedin className="w-5 h-5 text-[#041F3F]" />
+                  <SiLinkedin className="w-4 h-4" />
+                  LinkedIn
                 </a>
-              )}
+              </div>
             </Card>
           ))}
         </div>
