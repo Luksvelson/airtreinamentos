@@ -77,7 +77,7 @@ export function Instructors() {
                   <h3 className="font-bold text-[#001f3d]">{instructor.name}</h3>
                   <p className="text-sm text-primary font-medium">{instructor.role}</p>
                 </div>
-                <p className="text-sm text-white/70 line-clamp-3">
+                <p className="text-sm line-clamp-3 text-[#001f3d]">
                   {instructor.bio}
                 </p>
                 <a
