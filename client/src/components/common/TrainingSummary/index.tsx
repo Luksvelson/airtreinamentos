@@ -30,16 +30,16 @@ const trainingTypes = [
 
 export function TrainingSummary() {
   return (
-    <section id="treinamentos" className="py-16 md:py-24 bg-muted/30">
+    <section id="treinamentos" className="py-16 md:py-24 bg-[#041F3F]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+          <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">
             Capacitação Profissional
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="training-summary-title">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-testid="training-summary-title">
             Nossos Treinamentos
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             Programas desenvolvidos por especialistas com décadas de experiência em sistemas de ar comprimido industrial.
           </p>
         </div>
@@ -48,25 +48,25 @@ export function TrainingSummary() {
           {trainingTypes.map((type, index) => (
             <Card
               key={index}
-              className="p-6 md:p-8 border border-card-border hover-elevate transition-all duration-200 flex flex-col"
+              className="p-6 md:p-8 bg-white/10 border border-white/15 hover-elevate transition-all duration-200 flex flex-col"
               data-testid={`training-type-card-${index}`}
             >
               <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center">
                   <type.icon className="w-6 h-6 text-primary" />
                 </div>
-                <Badge className="bg-[#041F3F] text-white border-none text-xs">
+                <Badge className="bg-white/15 text-white border-white/20 text-xs">
                   {type.badge}
                 </Badge>
               </div>
-              <h3 className="text-xl font-bold text-[#041F3F] mb-3">{type.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
+              <h3 className="text-xl font-bold text-white mb-3">{type.title}</h3>
+              <p className="text-white/70 text-sm leading-relaxed mb-6 flex-1">
                 {type.description}
               </p>
               <Link href={type.href}>
                 <Button
                   variant="outline"
-                  className="w-full border-[#041F3F] text-[#041F3F]"
+                  className="w-full border-white/30 text-white"
                   data-testid={`button-ver-${type.title.toLowerCase()}`}
                 >
                   Saiba Mais
