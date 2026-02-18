@@ -25,7 +25,7 @@ export function AboutPreview() {
               <p>
                 A <strong className="text-[#041F3F]">AirTreinamentos</strong> nasceu da expertise acumulada pelo Grupo AirCenter ao longo de mais de 20 anos de atuação no mercado brasileiro de ar comprimido e gases medicinais.
               </p>
-              <p>
+              <p className="pt-[8px] pb-[8px]">
                 Reunimos os melhores profissionais do setor para desenvolver programas de treinamento que realmente fazem diferença na operação das empresas, com foco em segurança, eficiência e resultados práticos.
               </p>
             </div>
