@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Users, Award, Calendar } from "lucide-react";
+import { Users, Award, Calendar } from "lucide-react";
 import heroBackground from "@assets/generated_images/industrial_air_compressor_machine.png";
 
 const trustIndicators = [
@@ -29,25 +28,6 @@ export function Hero() {
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed" data-testid="hero-subtitle">
               Treinamentos de alto impacto para gestores industriais, engenheiros e equipes técnicas que buscam excelência em sistemas de ar comprimido.
             </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-primary text-primary-foreground font-semibold px-8 py-6 text-base"
-              data-testid="button-hero-conhecer-treinamentos"
-            >
-              Conhecer Treinamentos
-              <ChevronRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-white/30 text-white backdrop-blur-sm px-8 py-6 text-base"
-              data-testid="button-hero-falar-especialista"
-            >
-              Falar com Especialista
-            </Button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-12 max-w-3xl mx-auto">
