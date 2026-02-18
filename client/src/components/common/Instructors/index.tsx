@@ -44,16 +44,16 @@ const instructors = [
 
 export function Instructors() {
   return (
-    <section id="professores" className="py-16 md:py-24 bg-muted/30">
+    <section id="professores" className="py-16 md:py-24 bg-[#041F3F]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary border-primary/20 mb-4">
+          <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">
             Time de Especialistas
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F] mb-4" data-testid="instructors-title">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-testid="instructors-title">
             Nossos Professores
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-white/70 max-w-2xl mx-auto">
             Profissionais com décadas de experiência prática, prontos para compartilhar conhecimento e transformar sua equipe.
           </p>
         </div>
@@ -62,10 +62,10 @@ export function Instructors() {
           {instructors.map((instructor) => (
             <Card
               key={instructor.id}
-              className="overflow-hidden border-none shadow-lg"
+              className="overflow-visible border-none shadow-lg bg-white/10"
               data-testid={`instructor-card-${instructor.id}`}
             >
-              <div className="aspect-square overflow-hidden bg-[#041F3F]">
+              <div className="aspect-square overflow-hidden bg-white/5 rounded-t-xl">
                 <img
                   src={instructor.image}
                   alt={instructor.name}
@@ -74,15 +74,15 @@ export function Instructors() {
               </div>
               <div className="p-5 space-y-3">
                 <div>
-                  <h3 className="font-bold text-[#041F3F]">{instructor.name}</h3>
+                  <h3 className="font-bold text-white">{instructor.name}</h3>
                   <p className="text-sm text-primary font-medium">{instructor.role}</p>
                 </div>
-                <p className="text-sm text-muted-foreground line-clamp-3">
+                <p className="text-sm text-white/70 line-clamp-3">
                   {instructor.bio}
                 </p>
                 <a
                   href={instructor.linkedin}
-                  className="inline-flex items-center gap-2 text-sm text-[#041F3F] font-medium"
+                  className="inline-flex items-center gap-2 text-sm text-white font-medium"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid={`linkedin-${instructor.id}`}
