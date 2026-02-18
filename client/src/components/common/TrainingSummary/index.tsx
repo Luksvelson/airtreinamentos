@@ -66,7 +66,7 @@ export function TrainingSummary() {
               <Link href={type.href}>
                 <Button
                   variant="outline"
-                  className="w-full border-white/30 text-white"
+                  className="w-full border-white/30 text-[#ffffff] bg-[#FEB23D]"
                   data-testid={`button-ver-${type.title.toLowerCase()}`}
                 >
                   Saiba Mais
