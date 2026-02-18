@@ -72,7 +72,7 @@ export function Instructors() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="p-5 space-y-3">
+              <div className="p-5 space-y-3 bg-[#ffffff]">
                 <div>
                   <h3 className="font-bold text-white">{instructor.name}</h3>
                   <p className="text-sm text-primary font-medium">{instructor.role}</p>
