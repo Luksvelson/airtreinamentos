@@ -23,10 +23,10 @@ export function AboutPreview() {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                A <strong className="text-[#041F3F]">AirTreinamentos</strong> nasceu da expertise acumulada pelo Grupo AirCenter ao longo de mais de 20 anos de atuação no mercado brasileiro de ar comprimido e gases medicinais.
+                A <strong className="text-[#041F3F]">AirTreinamentos</strong> é a vertical educacional do Grupo AirPress, dedicada à capacitação técnica em sistemas de ar comprimido. Nossos treinamentos são voltados para profissionais e empresas que buscam maior eficiência, confiabilidade operacional e gestão inteligente da vida útil de compressores.
               </p>
-              <p className="pt-[8px] pb-[8px]">
-                Reunimos os melhores profissionais do setor para desenvolver programas de treinamento que realmente fazem diferença na operação das empresas, com foco em segurança, eficiência e resultados práticos.
+              <p>
+                Com base na experiência prática do grupo no mercado industrial e na área da saúde, oferecemos formação aplicada, atualizada e orientada para resultados reais.
               </p>
             </div>
             <Link href="/sobre">
