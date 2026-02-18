@@ -82,7 +82,7 @@ export function Instructors() {
                 </p>
                 <a
                   href={instructor.linkedin}
-                  className="inline-flex items-center gap-2 text-sm text-white font-medium"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#001f3d]"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid={`linkedin-${instructor.id}`}
