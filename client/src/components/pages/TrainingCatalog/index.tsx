@@ -71,55 +71,65 @@ export function TrainingCatalog() {
               {filteredCourses.map((course) => (
                 <Card
                   key={course.id}
-                  className="p-6 flex flex-col border border-card-border hover-elevate transition-all duration-200"
+                  className="flex flex-col border border-card-border hover-elevate transition-all duration-200"
                   data-testid={`course-card-${course.slug}`}
                 >
-                  <div className="flex items-start justify-between mb-4 flex-wrap gap-2">
-                    <div className="flex flex-wrap gap-1.5">
-                      {course.categories.map((cat) => (
-                        <Badge key={cat} className="bg-primary/10 text-primary border-primary/20 text-xs">
-                          {categoryLabels[cat]}
-                        </Badge>
-                      ))}
+                  <div className="relative h-48 w-full">
+                    <img
+                      src={course.image}
+                      alt={course.name}
+                      className="h-full w-full object-cover rounded-t-md"
+                      data-testid={`course-image-${course.slug}`}
+                    />
+                    <div className="absolute top-3 left-3 right-3 flex items-start justify-between flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        {course.categories.map((cat) => (
+                          <Badge key={cat} className="bg-white/90 text-[#041F3F] border-none text-xs shadow-sm">
+                            {categoryLabels[cat]}
+                          </Badge>
+                        ))}
+                      </div>
+                      <Badge className={`text-xs border-none shadow-sm ${course.modality === "presencial" ? "bg-[#041F3F] text-white" : "bg-emerald-600 text-white"}`}>
+                        {modalityLabels[course.modality]}
+                      </Badge>
                     </div>
-                    <Badge className={`text-xs border-none ${course.modality === "presencial" ? "bg-[#041F3F] text-white" : "bg-emerald-600 text-white"}`}>
-                      {modalityLabels[course.modality]}
-                    </Badge>
                   </div>
 
-                  <h3 className="text-lg font-bold text-[#041F3F] mb-2" data-testid={`course-name-${course.slug}`}>
-                    {course.name}
-                  </h3>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="text-lg font-bold text-[#041F3F] dark:text-white mb-2" data-testid={`course-name-${course.slug}`}>
+                      {course.name}
+                    </h3>
 
-                  <p className="text-sm text-muted-foreground mb-4 flex-1 line-clamp-3">
-                    {course.shortDescription}
-                  </p>
+                    <p className="text-sm text-muted-foreground mb-4 flex-1 line-clamp-3">
+                      {course.shortDescription}
+                    </p>
 
-                  <div className="flex items-center gap-4 mb-5 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1.5">
-                      <Clock className="w-4 h-4" />
-                      {course.duration}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      {course.modality === "presencial" ? (
-                        <MapPin className="w-4 h-4" />
-                      ) : (
-                        <Monitor className="w-4 h-4" />
-                      )}
-                      {modalityLabels[course.modality]}
-                    </span>
+                    <div className="flex items-center gap-4 mb-5 text-sm text-muted-foreground">
+                      <span className="flex items-center gap-1.5">
+                        <Clock className="w-4 h-4" />
+                        {course.duration}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        {course.modality === "presencial" ? (
+                          <MapPin className="w-4 h-4" />
+                        ) : (
+                          <Monitor className="w-4 h-4" />
+                        )}
+                        {modalityLabels[course.modality]}
+                      </span>
+                    </div>
+
+                    <Link href={`/treinamentos/${course.slug}`}>
+                      <Button
+                        variant="outline"
+                        className="w-full border-[#041F3F] text-[#041F3F]"
+                        data-testid={`button-saiba-mais-${course.slug}`}
+                      >
+                        Saiba Mais
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
                   </div>
-
-                  <Link href={`/treinamentos/${course.slug}`}>
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#041F3F] text-[#041F3F]"
-                      data-testid={`button-saiba-mais-${course.slug}`}
-                    >
-                      Saiba Mais
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
                 </Card>
               ))}
             </div>

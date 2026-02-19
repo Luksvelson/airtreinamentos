@@ -1,3 +1,12 @@
+import courseFundamentos from "../assets/images/course-fundamentos.png";
+import courseManutencaoParafuso from "../assets/images/course-manutencao-parafuso.png";
+import courseEficiencia from "../assets/images/course-eficiencia.png";
+import courseNr13 from "../assets/images/course-nr13.png";
+import courseGestaoSala from "../assets/images/course-gestao-sala.png";
+import courseQualidadeIso from "../assets/images/course-qualidade-iso.png";
+import courseRedes from "../assets/images/course-redes.png";
+import courseAutomacao from "../assets/images/course-automacao.png";
+
 export type Modality = "presencial" | "online";
 export type Category = "normas" | "manutencao" | "gestao";
 
@@ -14,6 +23,7 @@ export interface Course {
   duration: string;
   modality: Modality;
   categories: Category[];
+  image: string;
   heroSubtitle: string;
   about: string;
   syllabus: string[];
@@ -44,6 +54,7 @@ export const courses: Course[] = [
     duration: "16h",
     modality: "presencial",
     categories: ["gestao"],
+    image: courseFundamentos,
     heroSubtitle: "Domine os princípios fundamentais dos sistemas de ar comprimido e eleve o desempenho da sua operação industrial.",
     about: "Este curso oferece uma base sólida sobre os conceitos essenciais de ar comprimido, desde os princípios físicos até a aplicação prática em ambientes industriais. Ideal para profissionais que desejam compreender o funcionamento completo de um sistema de ar comprimido, incluindo compressores, secadores, filtros, reservatórios e redes de distribuição.",
     syllabus: [
@@ -86,6 +97,7 @@ export const courses: Course[] = [
     duration: "24h",
     modality: "presencial",
     categories: ["manutencao"],
+    image: courseManutencaoParafuso,
     heroSubtitle: "Aprenda técnicas avançadas de manutenção para garantir máxima disponibilidade e vida útil dos seus compressores parafuso.",
     about: "Curso avançado focado em técnicas de manutenção preventiva, preditiva e corretiva para compressores do tipo parafuso. Os participantes terão acesso a equipamentos reais para prática de procedimentos de manutenção, diagnóstico de falhas e otimização de desempenho.",
     syllabus: [
@@ -130,6 +142,7 @@ export const courses: Course[] = [
     duration: "12h",
     modality: "online",
     categories: ["gestao"],
+    image: courseEficiencia,
     heroSubtitle: "Reduza custos e aumente a sustentabilidade da sua operação com estratégias comprovadas de eficiência energética.",
     about: "Sistemas de ar comprimido representam até 30% do consumo elétrico industrial. Este curso ensina a identificar oportunidades de economia, implementar programas de eficiência energética e calcular o retorno sobre investimento de melhorias no sistema.",
     syllabus: [
@@ -172,6 +185,7 @@ export const courses: Course[] = [
     duration: "8h",
     modality: "online",
     categories: ["normas"],
+    image: courseNr13,
     heroSubtitle: "Garanta a conformidade da sua operação com a NR-13 e evite autuações e acidentes em sistemas pressurizados.",
     about: "A NR-13 é a norma que regulamenta a segurança na operação de caldeiras, vasos de pressão e tubulações. Este curso foca na aplicação prática da norma em compressores e sistemas de ar comprimido, garantindo que profissionais compreendam suas responsabilidades e saibam implementar os requisitos legais.",
     syllabus: [
@@ -214,6 +228,7 @@ export const courses: Course[] = [
     duration: "16h",
     modality: "presencial",
     categories: ["gestao", "manutencao"],
+    image: courseGestaoSala,
     heroSubtitle: "Transforme sua sala de compressores em um centro de excelência operacional com gestão inteligente e resultados mensuráveis.",
     about: "Este curso aborda a gestão completa de uma sala de compressores, desde o planejamento da operação até a análise de custos e indicadores de desempenho. Voltado para gestores e líderes técnicos que precisam tomar decisões estratégicas sobre investimentos, manutenção e operação de sistemas de ar comprimido.",
     syllabus: [
@@ -257,6 +272,7 @@ export const courses: Course[] = [
     duration: "8h",
     modality: "online",
     categories: ["normas"],
+    image: courseQualidadeIso,
     heroSubtitle: "Domine os padrões internacionais de qualidade do ar comprimido e garanta a conformidade e segurança dos seus processos.",
     about: "A qualidade do ar comprimido é crítica para diversos processos industriais, especialmente nas indústrias alimentícia, farmacêutica e eletrônica. Este curso detalha os requisitos da ISO 8573, métodos de medição e as tecnologias de tratamento de ar disponíveis no mercado.",
     syllabus: [
@@ -299,6 +315,7 @@ export const courses: Course[] = [
     duration: "12h",
     modality: "presencial",
     categories: ["manutencao"],
+    image: courseRedes,
     heroSubtitle: "Projete e mantenha redes de distribuição eficientes que minimizem perdas de carga e vazamentos.",
     about: "A rede de distribuição é um componente crítico do sistema de ar comprimido. Vazamentos e perda de carga inadequada podem representar desperdícios significativos de energia. Este curso aborda desde o projeto até a manutenção preventiva de redes, com foco em eficiência e confiabilidade.",
     syllabus: [
@@ -341,6 +358,7 @@ export const courses: Course[] = [
     duration: "16h",
     modality: "online",
     categories: ["manutencao", "gestao"],
+    image: courseAutomacao,
     heroSubtitle: "Domine as tecnologias de automação e controle para maximizar a eficiência e a confiabilidade dos seus compressores.",
     about: "Com a evolução da Indústria 4.0, a automação e o monitoramento inteligente de compressores tornaram-se essenciais. Este curso aborda desde os sistemas de controle básicos até soluções avançadas de IoT, análise de dados e manutenção preditiva aplicadas a sistemas de ar comprimido.",
     syllabus: [
