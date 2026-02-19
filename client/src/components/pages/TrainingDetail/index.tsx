@@ -157,13 +157,21 @@ export function TrainingDetail() {
                   <div className="space-y-5">
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Modalidade</p>
-                      <div className="flex items-center gap-2">
-                        {course.modality === "presencial" ? (
-                          <MapPin className="w-4 h-4 text-primary" />
-                        ) : (
-                          <Monitor className="w-4 h-4 text-primary" />
+                      <div className="space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          {course.modality === "presencial" ? (
+                            <MapPin className="w-4 h-4 text-primary" />
+                          ) : (
+                            <Monitor className="w-4 h-4 text-primary" />
+                          )}
+                          <span className="font-medium text-[#041F3F] dark:text-white">{modalityLabels[course.modality]}</span>
+                        </div>
+                        {course.modality === "presencial" && course.priceOnline && (
+                          <div className="flex items-center gap-2">
+                            <Monitor className="w-4 h-4 text-primary" />
+                            <span className="font-medium text-[#041F3F] dark:text-white">Também disponível Online</span>
+                          </div>
                         )}
-                        <span className="font-medium text-[#041F3F]">{modalityLabels[course.modality]}</span>
                       </div>
                     </div>
                     <div>
@@ -175,7 +183,26 @@ export function TrainingDetail() {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Investimento</p>
-                      <p className="text-sm text-muted-foreground">{course.investmentInfo}</p>
+                      <div className="space-y-2">
+                        {course.pricePresencial && (
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+                              <MapPin className="w-3.5 h-3.5" />
+                              Presencial
+                            </span>
+                            <span className="font-bold text-[#041F3F] dark:text-white">{course.pricePresencial}</span>
+                          </div>
+                        )}
+                        {course.priceOnline && (
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
+                              <Monitor className="w-3.5 h-3.5" />
+                              Online
+                            </span>
+                            <span className="font-bold text-[#041F3F] dark:text-white">{course.priceOnline}</span>
+                          </div>
+                        )}
+                      </div>
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Certificação</p>

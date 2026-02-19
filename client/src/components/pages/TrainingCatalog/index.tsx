@@ -14,8 +14,9 @@ const filters: { value: FilterType; label: string }[] = [
   { value: "all", label: "Todos" },
   { value: "presencial", label: "Presencial" },
   { value: "online", label: "Online" },
-  { value: "normas", label: "Normas" },
   { value: "manutencao", label: "Manutenção" },
+  { value: "eletrica", label: "Elétrica" },
+  { value: "normas", label: "Normas" },
   { value: "gestao", label: "Gestão" },
 ];
 
@@ -104,7 +105,7 @@ export function TrainingCatalog() {
                       {course.shortDescription}
                     </p>
 
-                    <div className="flex items-center gap-4 mb-5 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-4 mb-3 text-sm text-muted-foreground">
                       <span className="flex items-center gap-1.5">
                         <Clock className="w-4 h-4" />
                         {course.duration}
@@ -117,6 +118,21 @@ export function TrainingCatalog() {
                         )}
                         {modalityLabels[course.modality]}
                       </span>
+                    </div>
+
+                    <div className="mb-5 space-y-1" data-testid={`course-prices-${course.slug}`}>
+                      {course.pricePresencial && (
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-muted-foreground">Presencial:</span>
+                          <span className="font-bold text-[#041F3F] dark:text-white">{course.pricePresencial}</span>
+                        </div>
+                      )}
+                      {course.priceOnline && (
+                        <div className="flex items-center justify-between text-sm">
+                          <span className="text-muted-foreground">Online:</span>
+                          <span className="font-bold text-[#041F3F] dark:text-white">{course.priceOnline}</span>
+                        </div>
+                      )}
                     </div>
 
                     <Link href={`/treinamentos/${course.slug}`}>
