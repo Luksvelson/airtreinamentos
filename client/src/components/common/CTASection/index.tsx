@@ -13,7 +13,7 @@ export function CTASection() {
           Explore nossos programas de treinamento presenciais, online e in-company. Encontre a capacitação ideal para sua equipe.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/treinamentos/presenciais">
+          <Link href="/treinamentos">
             <Button
               size="lg"
               className="bg-[#041F3F] text-white font-semibold px-8"
@@ -23,17 +23,6 @@ export function CTASection() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
-          <a
-            href="/#contato"
-            onClick={(e) => {
-              e.preventDefault();
-              const element = document.getElementById("contato");
-              if (element) {
-                element.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
-          >
-          </a>
         </div>
       </div>
     </section>

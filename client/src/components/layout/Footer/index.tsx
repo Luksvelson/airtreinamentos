@@ -5,9 +5,7 @@ import logoImage from "@assets/Logotipo_AirTreinamentos.png";
 const quickLinks = [
   { label: "Início", href: "/" },
   { label: "Sobre", href: "/sobre" },
-  { label: "Presenciais", href: "/treinamentos/presenciais" },
-  { label: "Online", href: "/treinamentos/online" },
-  { label: "In-Company", href: "/treinamentos/in-company" },
+  { label: "Treinamentos", href: "/treinamentos" },
   { label: "Contato", href: "/#contato" },
 ];
 

@@ -1,35 +1,15 @@
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoAirTreinamentos from "@assets/Logotipo_AirTreinamentos.png";
 
-const trainingSubItems = [
-  { label: "Presenciais", href: "/treinamentos/presenciais" },
-  { label: "Online", href: "/treinamentos/online" },
-  { label: "In-Company", href: "/treinamentos/in-company" },
-];
-
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isTrainingOpen, setIsTrainingOpen] = useState(false);
-  const [isMobileTrainingOpen, setIsMobileTrainingOpen] = useState(false);
   const [location] = useLocation();
-  const dropdownRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsTrainingOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   const scrollToSection = (href: string) => {
     setIsMenuOpen(false);
-    setIsMobileTrainingOpen(false);
     if (href.startsWith("/#")) {
       const sectionId = href.replace("/#", "");
       const element = document.getElementById(sectionId);
@@ -75,32 +55,13 @@ export function Header() {
               Sobre
             </Link>
 
-            <div className="relative" ref={dropdownRef}>
-              <button
-                className={`${navLinkClass} flex items-center gap-1 cursor-pointer`}
-                onClick={() => setIsTrainingOpen(!isTrainingOpen)}
-                data-testid="nav-link-treinamentos"
-              >
-                Treinamentos
-                <ChevronDown className={`w-4 h-4 transition-transform ${isTrainingOpen ? "rotate-180" : ""}`} />
-              </button>
-
-              <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-md shadow-lg border border-border py-2 transition-all ${isTrainingOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-1"}`}
-              >
-                {trainingSubItems.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-4 py-2.5 text-sm text-[#041F3F] hover:bg-muted hover:text-primary transition-colors"
-                    onClick={() => setIsTrainingOpen(false)}
-                    data-testid={`nav-dropdown-${item.label.toLowerCase()}`}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
+            <Link
+              href="/treinamentos"
+              className={navLinkClass}
+              data-testid="nav-link-treinamentos"
+            >
+              Treinamentos
+            </Link>
 
             <a
               href="/#contato"
@@ -162,31 +123,14 @@ export function Header() {
               Sobre
             </Link>
 
-            <div>
-              <button
-                onClick={() => setIsMobileTrainingOpen(!isMobileTrainingOpen)}
-                className="w-full flex items-center justify-between text-base font-medium text-[#041F3F] hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-muted"
-                data-testid="nav-mobile-link-treinamentos"
-              >
-                Treinamentos
-                <ChevronDown className={`w-4 h-4 transition-transform ${isMobileTrainingOpen ? "rotate-180" : ""}`} />
-              </button>
-              {isMobileTrainingOpen && (
-                <div className="ml-4 flex flex-col gap-1">
-                  {trainingSubItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => { setIsMenuOpen(false); setIsMobileTrainingOpen(false); }}
-                      className="text-sm font-medium text-[#041F3F]/80 hover:text-primary transition-colors py-2.5 px-4 rounded-lg hover:bg-muted"
-                      data-testid={`nav-mobile-dropdown-${item.label.toLowerCase()}`}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+            <Link
+              href="/treinamentos"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-base font-medium text-[#041F3F] hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-muted"
+              data-testid="nav-mobile-link-treinamentos"
+            >
+              Treinamentos
+            </Link>
 
             <a
               href="/#contato"

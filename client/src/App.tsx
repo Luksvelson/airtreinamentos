@@ -5,9 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Home } from "@/components/pages/Home";
 import { About } from "@/components/pages/About";
-import { TrainingPresencial } from "@/components/pages/TrainingPresencial";
-import { TrainingOnline } from "@/components/pages/TrainingOnline";
-import { TrainingInCompany } from "@/components/pages/TrainingInCompany";
+import { TrainingCatalog } from "@/components/pages/TrainingCatalog";
+import { TrainingDetail } from "@/components/pages/TrainingDetail";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -15,9 +14,8 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/sobre" component={About} />
-      <Route path="/treinamentos/presenciais" component={TrainingPresencial} />
-      <Route path="/treinamentos/online" component={TrainingOnline} />
-      <Route path="/treinamentos/in-company" component={TrainingInCompany} />
+      <Route path="/treinamentos" component={TrainingCatalog} />
+      <Route path="/treinamentos/:slug" component={TrainingDetail} />
       <Route component={NotFound} />
     </Switch>
   );

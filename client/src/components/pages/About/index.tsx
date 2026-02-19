@@ -163,7 +163,7 @@ export function About() {
             <p className="text-white/80 mb-8 max-w-2xl mx-auto">
               Entre em contato conosco e descubra como nossos treinamentos podem elevar o nível técnico da sua empresa.
             </p>
-            <Link href="/treinamentos/presenciais">
+            <Link href="/treinamentos">
               <Button
                 size="lg"
                 className="bg-primary text-primary-foreground font-semibold px-8"
