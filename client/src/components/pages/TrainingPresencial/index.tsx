@@ -106,13 +106,6 @@ export function TrainingPresencial() {
                           window.location.href = "/#contato";
                         }}
                       >
-                        <Button
-                          className="w-full bg-primary text-primary-foreground font-semibold"
-                          data-testid={`button-inscrever-${course.id}`}
-                        >
-                          Solicitar Proposta
-                          <ArrowRight className="w-4 h-4 ml-2" />
-                        </Button>
                       </a>
                     </div>
                   </Card>

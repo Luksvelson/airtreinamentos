@@ -17,9 +17,6 @@ export function ContactSection() {
       <div className="absolute inset-0 bg-[#041F3F]/85" />
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
         <div className="text-center mb-12">
-          <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">
-            Fale Conosco
-          </Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4" data-testid="contact-section-title">
             Entre em Contato
           </h2>

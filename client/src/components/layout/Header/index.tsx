@@ -123,12 +123,6 @@ export function Header() {
                 scrollToSection("/#contato");
               }}
             >
-              <Button
-                className="bg-primary text-primary-foreground font-semibold"
-                data-testid="button-solicitar-proposta"
-              >
-                Solicitar Proposta
-              </Button>
             </a>
           </div>
 

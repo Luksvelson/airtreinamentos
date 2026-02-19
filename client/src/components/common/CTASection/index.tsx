@@ -33,14 +33,6 @@ export function CTASection() {
               }
             }}
           >
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#041F3F]/30 text-[#041F3F] px-8"
-              data-testid="button-cta-contato"
-            >
-              Fale Conosco
-            </Button>
           </a>
         </div>
       </div>

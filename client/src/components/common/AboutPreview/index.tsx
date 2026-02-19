@@ -15,9 +15,6 @@ export function AboutPreview() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge className="bg-primary/10 text-primary border-primary/20">
-              Quem Somos
-            </Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F]" data-testid="about-preview-title">
               Parte do <span className="text-primary">Grupo AirCenter</span>
             </h2>
