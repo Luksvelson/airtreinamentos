@@ -37,9 +37,6 @@ export function TrainingCatalog() {
       <main className="flex-1 pt-16 md:pt-20">
         <section className="py-16 md:py-24 bg-gradient-to-br from-[#041F3F] to-[#0a3566]">
           <div className="max-w-7xl mx-auto px-4 md:px-8 text-center">
-            <Badge className="bg-primary/20 text-primary border-primary/30 mb-4">
-              Capacitação Profissional
-            </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6" data-testid="catalog-title">
               Nossos <span className="text-primary">Treinamentos</span>
             </h1>

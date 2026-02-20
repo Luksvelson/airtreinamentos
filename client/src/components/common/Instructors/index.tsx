@@ -163,12 +163,9 @@ export function Instructors() {
                 <h2 className="text-2xl font-bold text-[#041F3F] dark:text-white" data-testid="modal-instructor-name">
                   {selectedInstructor.name}
                 </h2>
-                <Badge className="bg-primary/20 text-primary border-primary/30 mt-1.5">
-                  {selectedInstructor.role}
-                </Badge>
                 <a
                   href={selectedInstructor.linkedin}
-                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground mt-3 ml-2"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="modal-linkedin"
@@ -257,12 +254,6 @@ export function Instructors() {
                   }, 300);
                 }}
               >
-                <Button
-                  className="w-full bg-[#041F3F] text-white"
-                  data-testid="modal-button-contato"
-                >
-                  Agende um Treinamento
-                </Button>
               </a>
             </div>
           </DialogContent>

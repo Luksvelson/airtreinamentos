@@ -16,9 +16,9 @@ export function AboutPreview() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#041F3F]" data-testid="about-preview-title">
-              Parte do <span className="text-primary">Grupo AirCenter</span>
+              Parte do <span className="text-primary">Grupo AirPress</span>
             </h2>
-            <div className="space-y-4 text-muted-foreground">
+            <div className="mb-3 space-y-4 text-muted-foreground">
               <p>
                 A <strong className="text-[#041F3F]">AirTreinamentos</strong> é a vertical educacional do Grupo AirPress, dedicada à capacitação técnica em sistemas de ar comprimido. Nossos treinamentos são voltados para profissionais e empresas que buscam maior eficiência, confiabilidade operacional e gestão inteligente da vida útil de compressores.
               </p>
