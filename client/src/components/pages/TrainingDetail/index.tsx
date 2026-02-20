@@ -25,7 +25,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link, useParams, Redirect } from "wouter";
-import { getCourseBySlug, modalityLabels, categoryLabels } from "@/data/courses";
+import { getCourseBySlug, categoryLabels } from "@/data/courses";
 
 export function TrainingDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -48,13 +48,9 @@ export function TrainingDetail() {
               </Button>
             </Link>
             <div className="flex flex-wrap gap-2 mb-4">
-              <Badge className={`text-sm border-none ${course.modality === "presencial" ? "bg-white/20 text-white" : "bg-emerald-500/20 text-emerald-300"}`}>
-                {course.modality === "presencial" ? (
-                  <MapPin className="w-3.5 h-3.5 mr-1.5" />
-                ) : (
-                  <Monitor className="w-3.5 h-3.5 mr-1.5" />
-                )}
-                {modalityLabels[course.modality]}
+              <Badge className="text-sm border-none bg-white/20 text-white">
+                <MapPin className="w-3.5 h-3.5 mr-1.5" />
+                Presencial e Online
               </Badge>
               <Badge className="bg-white/20 text-white text-sm border-none">
                 <Clock className="w-3.5 h-3.5 mr-1.5" />
@@ -159,12 +155,12 @@ export function TrainingDetail() {
                       <p className="text-sm text-muted-foreground mb-1">Modalidade</p>
                       <div className="space-y-1.5">
                         <div className="flex items-center gap-2">
-                          {course.modality === "presencial" ? (
-                            <MapPin className="w-4 h-4 text-primary" />
-                          ) : (
-                            <Monitor className="w-4 h-4 text-primary" />
-                          )}
-                          <span className="font-medium text-[#041F3F] dark:text-white">{modalityLabels[course.modality]}</span>
+                          <MapPin className="w-4 h-4 text-primary" />
+                          <span className="font-medium text-[#041F3F] dark:text-white">Presencial</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Monitor className="w-4 h-4 text-primary" />
+                          <span className="font-medium text-[#041F3F] dark:text-white">Online</span>
                         </div>
                       </div>
                     </div>

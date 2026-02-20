@@ -4,16 +4,14 @@ import { Footer } from "@/components/layout/Footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Clock, MapPin, Monitor, Filter } from "lucide-react";
+import { ArrowRight, Clock, MapPin, Filter } from "lucide-react";
 import { Link } from "wouter";
-import { courses, categoryLabels, modalityLabels, type Category, type Modality } from "@/data/courses";
+import { courses, categoryLabels, type Category } from "@/data/courses";
 
-type FilterType = "all" | Modality | Category;
+type FilterType = "all" | Category;
 
 const filters: { value: FilterType; label: string }[] = [
   { value: "all", label: "Todos" },
-  { value: "presencial", label: "Presencial" },
-  { value: "online", label: "Online" },
   { value: "manutencao", label: "Manutenção" },
   { value: "eletrica", label: "Elétrica" },
   { value: "normas", label: "Normas" },
@@ -25,9 +23,6 @@ export function TrainingCatalog() {
 
   const filteredCourses = courses.filter((course) => {
     if (activeFilter === "all") return true;
-    if (activeFilter === "presencial" || activeFilter === "online") {
-      return course.modality === activeFilter;
-    }
     return course.categories.includes(activeFilter as Category);
   });
 
@@ -87,8 +82,8 @@ export function TrainingCatalog() {
                           </Badge>
                         ))}
                       </div>
-                      <Badge className={`text-xs border-none shadow-sm ${course.modality === "presencial" ? "bg-[#041F3F] text-white" : "bg-emerald-600 text-white"}`}>
-                        {modalityLabels[course.modality]}
+                      <Badge className="text-xs border-none shadow-sm bg-[#041F3F] text-white">
+                        Presencial e Online
                       </Badge>
                     </div>
                   </div>
@@ -108,12 +103,8 @@ export function TrainingCatalog() {
                         {course.duration}
                       </span>
                       <span className="flex items-center gap-1.5">
-                        {course.modality === "presencial" ? (
-                          <MapPin className="w-4 h-4" />
-                        ) : (
-                          <Monitor className="w-4 h-4" />
-                        )}
-                        {modalityLabels[course.modality]}
+                        <MapPin className="w-4 h-4" />
+                        Presencial e Online
                       </span>
                     </div>
 
