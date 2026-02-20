@@ -117,21 +117,6 @@ export function TrainingCatalog() {
                       </span>
                     </div>
 
-                    <div className="mb-5 space-y-1" data-testid={`course-prices-${course.slug}`}>
-                      {course.pricePresencial && (
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">Presencial:</span>
-                          <span className="font-bold text-[#041F3F] dark:text-white">{course.pricePresencial}</span>
-                        </div>
-                      )}
-                      {course.priceOnline && (
-                        <div className="flex items-center justify-between text-sm">
-                          <span className="text-muted-foreground">Online:</span>
-                          <span className="font-bold text-[#041F3F] dark:text-white">{course.priceOnline}</span>
-                        </div>
-                      )}
-                    </div>
-
                     <Link href={`/treinamentos/${course.slug}`}>
                       <Button
                         variant="outline"

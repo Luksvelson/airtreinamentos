@@ -26,8 +26,6 @@ export interface Course {
   modality: Modality;
   categories: Category[];
   image: string;
-  pricePresencial: string | null;
-  priceOnline: string | null;
   heroSubtitle: string;
   about: string;
   syllabus: string[];
@@ -59,8 +57,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["manutencao"],
     image: coursePistao,
-    pricePresencial: "R$ 2.800,00",
-    priceOnline: "R$ 299,90",
     heroSubtitle: "Torne-se um técnico especialista em manutenção preventiva, corretiva e reparo de compressores alternativos de pistão.",
     about: "Este curso forma profissionais completos na manutenção de compressores de pistão, abordando desde os fundamentos de funcionamento até procedimentos avançados de reparo. O aluno aprenderá a realizar diagnósticos precisos, executar manutenções preventivas e corretivas, e dominar técnicas de reparo que garantem a longevidade e eficiência dos equipamentos.",
     syllabus: [
@@ -92,7 +88,7 @@ export const courses: Course[] = [
     faq: [
       { question: "Preciso ter experiência prévia?", answer: "Conhecimento básico em mecânica industrial é recomendado, mas o curso parte dos fundamentos." },
       { question: "O curso inclui aulas práticas?", answer: "Sim. A modalidade presencial inclui atividades práticas em compressores de pistão reais." },
-      { question: "Posso fazer o curso online?", answer: "Sim. Oferecemos a versão online por R$ 299,90 com conteúdo teórico completo e videoaulas." },
+      { question: "Posso fazer o curso online?", answer: "Sim. Oferecemos a versão online com conteúdo teórico completo e videoaulas. Entre em contato para mais informações." },
       { question: "Há opção de pagamento parcelado?", answer: "Sim, entre em contato conosco para conhecer as condições de parcelamento disponíveis." },
     ],
   },
@@ -105,8 +101,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["manutencao"],
     image: courseParafusoManutencao,
-    pricePresencial: "R$ 3.899,00",
-    priceOnline: "R$ 599,90",
     heroSubtitle: "Domine as técnicas de manutenção preventiva, corretiva e reparo de compressores rotativos de parafuso.",
     about: "Curso completo e aprofundado em manutenção de compressores rotativos de parafuso, o tipo mais utilizado na indústria moderna. Com 42 horas de conteúdo, o profissional será capacitado a realizar todos os procedimentos de manutenção preventiva, corretiva e reparo, garantindo máxima disponibilidade e vida útil dos equipamentos.",
     syllabus: [
@@ -153,8 +147,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["manutencao"],
     image: courseParafusoReparo,
-    pricePresencial: "R$ 4.799,00",
-    priceOnline: "R$ 829,00",
     heroSubtitle: "Especialize-se no reparo avançado de unidades compressoras rotativas de parafuso com técnicas profissionais.",
     about: "Curso avançado e especializado focado exclusivamente no reparo de unidades compressoras de parafuso. Este treinamento capacita o profissional a realizar intervenções complexas nas unidades compressoras, incluindo desmontagem, inspeção, substituição de componentes internos e remontagem com precisão. Ideal para quem já possui experiência em manutenção e deseja se aprofundar no reparo.",
     syllabus: [
@@ -199,8 +191,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["manutencao"],
     image: courseRefrigeracao,
-    pricePresencial: "R$ 1.697,00",
-    priceOnline: "R$ 750,00",
     heroSubtitle: "Domine os sistemas de refrigeração e tratamento do ar comprimido com o curso mais completo do mercado.",
     about: "Com 60 horas de conteúdo, este é o curso mais abrangente sobre tratamento do ar comprimido. Aborda desde os princípios de refrigeração até as tecnologias mais avançadas de secagem e filtragem, capacitando o profissional a projetar, instalar e manter sistemas de tratamento que garantem a qualidade do ar conforme as exigências de cada aplicação industrial.",
     syllabus: [
@@ -247,8 +237,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["eletrica", "manutencao"],
     image: courseComandoEletrico,
-    pricePresencial: "R$ 2.990,00",
-    priceOnline: "R$ 1.090,00",
     heroSubtitle: "Domine os sistemas de comando elétrico de compressores de pistão e parafuso, da partida direta ao inversor de frequência.",
     about: "Curso abrangente sobre os sistemas de comando elétrico utilizados em compressores de pistão e parafuso. O profissional aprenderá desde os métodos de partida convencionais até as tecnologias mais modernas como soft start, inversores de frequência e motores de ímã permanente. Com 50 horas de conteúdo, o curso forma especialistas preparados para instalar, manter e diagnosticar problemas em qualquer sistema de comando elétrico de compressores.",
     syllabus: [
@@ -296,8 +284,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["manutencao", "gestao"],
     image: courseMontagem,
-    pricePresencial: "R$ 899,00",
-    priceOnline: "R$ 395,00",
     heroSubtitle: "Aprenda a projetar e montar centrais completas de ar comprimido com geração, tratamento, armazenamento e rede de distribuição.",
     about: "Este curso capacita o profissional a projetar e montar centrais completas de ar comprimido, abrangendo os três pilares fundamentais: geração, tratamento e armazenamento. Além disso, aborda o dimensionamento e instalação de redes de distribuição, garantindo que o sistema opere com máxima eficiência e atenda às demandas da planta industrial.",
     syllabus: [
@@ -343,8 +329,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["gestao"],
     image: courseGerenciamento,
-    pricePresencial: "R$ 1.199,00",
-    priceOnline: "R$ 320,00",
     heroSubtitle: "Gerencie a produção e utilização do ar comprimido com inteligência, conectando sua operação à Indústria 4.0.",
     about: "Curso estratégico voltado para gestores e líderes técnicos que precisam otimizar a produção e utilização do ar comprimido em suas plantas industriais. Com foco na Indústria 4.0, aborda as tecnologias de monitoramento, análise de dados e gestão inteligente que permitem reduzir custos, aumentar a eficiência e tomar decisões baseadas em dados.",
     syllabus: [
@@ -387,8 +371,6 @@ export const courses: Course[] = [
     modality: "presencial",
     categories: ["normas"],
     image: courseNr13,
-    pricePresencial: "R$ 1.399,00",
-    priceOnline: "R$ 349,00",
     heroSubtitle: "Garanta a conformidade da sua operação com a NR-13 e capacite sua equipe conforme as exigências do Ministério do Trabalho.",
     about: "A NR-13 é a norma do Ministério do Trabalho e Emprego que regulamenta a segurança na operação de caldeiras, vasos de pressão e tubulações. Com 30 horas de conteúdo, este curso aprofunda a aplicação prática da norma em compressores e sistemas de ar comprimido, garantindo que profissionais compreendam suas responsabilidades e saibam implementar todos os requisitos legais.",
     syllabus: [
@@ -433,8 +415,6 @@ export const courses: Course[] = [
     modality: "online",
     categories: ["normas"],
     image: courseSeguranca,
-    pricePresencial: null,
-    priceOnline: "R$ 89,00",
     heroSubtitle: "Conheça as principais normas de segurança aplicadas a sistemas de ar comprimido de forma rápida e objetiva.",
     about: "Curso 100% online e objetivo que apresenta as principais normas de segurança aplicáveis a sistemas de ar comprimido. Em apenas 2 horas, o profissional terá uma visão clara das exigências normativas, boas práticas de segurança e responsabilidades legais relacionadas à operação e manutenção de sistemas pressurizados.",
     syllabus: [
@@ -475,8 +455,6 @@ export const courses: Course[] = [
     modality: "online",
     categories: ["gestao"],
     image: courseRevolucao,
-    pricePresencial: null,
-    priceOnline: "R$ 99,00",
     heroSubtitle: "Entenda a evolução industrial da 1ª à 4ª revolução e descubra como se conectar com a 5ª revolução industrial.",
     about: "Este curso oferece uma jornada pela história e evolução da indústria, desde a primeira revolução industrial até a Indústria 4.0 atual, e projeta o futuro com a 5ª revolução industrial. O profissional entenderá como cada revolução transformou os processos produtivos, quais tecnologias foram determinantes e como se preparar para as mudanças que estão por vir, com foco especial na aplicação ao setor de ar comprimido e manufatura.",
     syllabus: [
@@ -499,7 +477,7 @@ export const courses: Course[] = [
       "Visão ampla e conectada da evolução industrial",
       "Conteúdo acessível e didático",
       "100% online com flexibilidade de horário",
-      "Investimento acessível de apenas R$ 99,00",
+      "Investimento acessível",
       "Aplicação prática ao setor de ar comprimido",
     ],
     certification: "Certificado de Conclusão em Revolução Industrial: da 1ª à 5ª, emitido digitalmente pela AirTreinamentos.",

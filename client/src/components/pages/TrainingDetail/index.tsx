@@ -166,12 +166,6 @@ export function TrainingDetail() {
                           )}
                           <span className="font-medium text-[#041F3F] dark:text-white">{modalityLabels[course.modality]}</span>
                         </div>
-                        {course.modality === "presencial" && course.priceOnline && (
-                          <div className="flex items-center gap-2">
-                            <Monitor className="w-4 h-4 text-primary" />
-                            <span className="font-medium text-[#041F3F] dark:text-white">Também disponível Online</span>
-                          </div>
-                        )}
                       </div>
                     </div>
                     <div>
@@ -179,29 +173,6 @@ export function TrainingDetail() {
                       <div className="flex items-center gap-2">
                         <Clock className="w-4 h-4 text-primary" />
                         <span className="font-medium text-[#041F3F]">{course.duration}</span>
-                      </div>
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-1">Investimento</p>
-                      <div className="space-y-2">
-                        {course.pricePresencial && (
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
-                              <MapPin className="w-3.5 h-3.5" />
-                              Presencial
-                            </span>
-                            <span className="font-bold text-[#041F3F] dark:text-white">{course.pricePresencial}</span>
-                          </div>
-                        )}
-                        {course.priceOnline && (
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm text-muted-foreground flex items-center gap-1.5">
-                              <Monitor className="w-3.5 h-3.5" />
-                              Online
-                            </span>
-                            <span className="font-bold text-[#041F3F] dark:text-white">{course.priceOnline}</span>
-                          </div>
-                        )}
                       </div>
                     </div>
                     <div>
